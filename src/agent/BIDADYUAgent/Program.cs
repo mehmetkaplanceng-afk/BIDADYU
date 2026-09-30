@@ -73,6 +73,13 @@ var trayThread = new Thread(() =>
             "BIDADYU Agent - PC Bilgisi", MessageBoxButtons.OK, MessageBoxIcon.Information);
     });
     contextMenu.Items.Add("-");
+    var consoleMenuItem = new ToolStripMenuItem("💻 Konsol Penceresini Göster/Gizle");
+    consoleMenuItem.Click += (s, e) =>
+    {
+        ConsoleHelper.ToggleConsole();
+    };
+    contextMenu.Items.Add(consoleMenuItem);
+    contextMenu.Items.Add("-");
     contextMenu.Items.Add("❌ Çıkış", null, (s, e) =>
     {
         trayIcon.Visible = false;
