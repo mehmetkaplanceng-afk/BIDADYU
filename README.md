@@ -97,7 +97,7 @@ Sunucu IP adresi değiştiğinde sadece bu metin belgesini güncellemek yeterlid
 
 | BİDB Arayüzü | Sistem Tepsisi Ajanı |
 | :---: | :---: |
-| ![Frontend](src/frontend/src/assets/frontendbidady.png) | ![Agent Tray](src/frontend/assets/agentbidady.png) |
+| ![Frontend](src/frontend/src/assets/frontendbidady.png) | ![Agent Tray](src/frontend/src/assets/agentbidady.png) |
 
 ---
 
