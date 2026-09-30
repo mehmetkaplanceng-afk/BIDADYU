@@ -86,7 +86,7 @@ Veya manuel olarak:
 İstemci bilgisayarlara dağıtılan `BIDADYUAgent.exe` dosyasının yanında bulunan `server_ip.txt` dosyası sunucu IP adresini belirler:
 
 ```text
-10.2.134.213
+x.x.x.x
 ```
 
 Sunucu IP adresi değiştiğinde sadece bu metin belgesini güncellemek yeterlidir.
