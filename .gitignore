@@ -1,0 +1,29 @@
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+.vscode/
+
+# Build outputs
+node_modules/
+dist/
+build/
+
+# Database & logs
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Agent Standalone Packages (Ignore build artifacts on Desktop)
+BIDADYU-Agent-LAN-Package/
+BIDADYU-Agent-SingleExe/

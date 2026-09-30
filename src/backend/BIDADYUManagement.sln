@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDADYUManagement.Api", "BIDADYUManagement.Api\BIDADYUManagement.Api.csproj", "{F1E8994F-5E7F-4866-BD72-0A4B458B24FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDADYUManagement.Application", "BIDADYUManagement.Application\BIDADYUManagement.Application.csproj", "{2ECD90F8-3203-4943-9B5D-019414333EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDADYUManagement.Domain", "BIDADYUManagement.Domain\BIDADYUManagement.Domain.csproj", "{3EF1E6CC-3C0E-49F1-B908-058B51ADE4E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDADYUManagement.Infrastructure", "BIDADYUManagement.Infrastructure\BIDADYUManagement.Infrastructure.csproj", "{64D73EF1-D0BD-4D23-93EE-B43A15B1B3CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDADYUManagement.UnitTests", "..\..\tests\BIDADYUManagement.UnitTests\BIDADYUManagement.UnitTests.csproj", "{450210A3-5079-4688-88A2-F83F90B6447A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BIDADYUManagement.IntegrationTests", "..\..\tests\BIDADYUManagement.IntegrationTests\BIDADYUManagement.IntegrationTests.csproj", "{AE2E89B1-D2ED-4412-93CB-148DD57C4C62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1E8994F-5E7F-4866-BD72-0A4B458B24FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E8994F-5E7F-4866-BD72-0A4B458B24FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E8994F-5E7F-4866-BD72-0A4B458B24FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E8994F-5E7F-4866-BD72-0A4B458B24FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ECD90F8-3203-4943-9B5D-019414333EFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECD90F8-3203-4943-9B5D-019414333EFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECD90F8-3203-4943-9B5D-019414333EFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECD90F8-3203-4943-9B5D-019414333EFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF1E6CC-3C0E-49F1-B908-058B51ADE4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF1E6CC-3C0E-49F1-B908-058B51ADE4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF1E6CC-3C0E-49F1-B908-058B51ADE4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF1E6CC-3C0E-49F1-B908-058B51ADE4E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D73EF1-D0BD-4D23-93EE-B43A15B1B3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D73EF1-D0BD-4D23-93EE-B43A15B1B3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D73EF1-D0BD-4D23-93EE-B43A15B1B3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D73EF1-D0BD-4D23-93EE-B43A15B1B3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450210A3-5079-4688-88A2-F83F90B6447A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450210A3-5079-4688-88A2-F83F90B6447A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450210A3-5079-4688-88A2-F83F90B6447A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450210A3-5079-4688-88A2-F83F90B6447A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE2E89B1-D2ED-4412-93CB-148DD57C4C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2E89B1-D2ED-4412-93CB-148DD57C4C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2E89B1-D2ED-4412-93CB-148DD57C4C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2E89B1-D2ED-4412-93CB-148DD57C4C62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
