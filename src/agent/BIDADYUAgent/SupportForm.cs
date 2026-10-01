@@ -277,6 +277,24 @@ public class SupportForm : Form
                         statusBgColor = Color.FromArgb(254, 249, 195); // Açık sarı
                     }
 
+                    if (result.Status != _lastTicketStatus)
+                    {
+                        string oldStatus = _lastTicketStatus;
+                        _lastTicketStatus = result.Status;
+
+                        if (!string.IsNullOrEmpty(oldStatus))
+                        {
+                            if (result.Status == "InProgress")
+                            {
+                                _showBalloonNotification?.Invoke("🛠️ BİDADYU Destek Güncellemesi", "Talebiniz alındı, şu an ilgileniliyor!");
+                            }
+                            else if (result.Status == "Completed")
+                            {
+                                _showBalloonNotification?.Invoke("✅ Talebiniz Tamamlandı", "Destek talebiniz başarıyla tamamlanmıştır.");
+                            }
+                        }
+                    }
+
                     lblStatusDetail.Text = statusText;
                     lblStatusDetail.Font = new Font("Segoe UI", 8.5f, FontStyle.Bold);
                     statusPanel.BackColor = statusBgColor;
