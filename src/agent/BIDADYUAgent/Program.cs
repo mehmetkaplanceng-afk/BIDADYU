@@ -50,6 +50,9 @@ var trayThread = new Thread(() =>
     supportForm = new SupportForm(httpClient, appSettings, () =>
     {
         trayIcon.ShowBalloonTip(3000, "Bildirim Gönderildi", "Talebiniz Sistem Yöneticisine iletildi!", ToolTipIcon.Info);
+    }, (title, message) =>
+    {
+        trayIcon.ShowBalloonTip(4000, title, message, ToolTipIcon.Info);
     });
 
     var contextMenu = new ContextMenuStrip();

@@ -26,5 +26,14 @@ services:
       - backend
     restart: always
 
+  agent:
+    build:
+      context: .
+      dockerfile: src/agent/BIDADYUAgent/Dockerfile
+    container_name: bidadyu-agent
+    depends_on:
+      - backend
+    restart: always
+
 volumes:
   bidadyu-data:

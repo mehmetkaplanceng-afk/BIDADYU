@@ -12,6 +12,8 @@ public class SupportForm : Form
     private readonly HttpClient _httpClient;
     private readonly AppSettings _appSettings;
     private readonly Action _onTicketSent;
+    private readonly Action<string, string>? _showBalloonNotification;
+    private string _lastTicketStatus = "";
 
     private Label lblHeader;
     private Label lblComputerName;
@@ -25,11 +27,12 @@ public class SupportForm : Form
     private Label lblStatusDetail;
     private System.Windows.Forms.Timer statusTimer;
 
-    public SupportForm(HttpClient httpClient, AppSettings appSettings, Action onTicketSent)
+    public SupportForm(HttpClient httpClient, AppSettings appSettings, Action onTicketSent, Action<string, string>? showBalloonNotification = null)
     {
         _httpClient = httpClient;
         _appSettings = appSettings;
         _onTicketSent = onTicketSent;
+        _showBalloonNotification = showBalloonNotification;
 
         InitializeComponent();
         FetchCurrentTicketStatus();
