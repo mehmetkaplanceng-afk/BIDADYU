@@ -1,1 +1,22 @@
-# Multi-stage Dockerfile for Agent (Windows)\nFROM mcr.microsoft.com/dotnet/sdk:8.0-windowsservercore-ltsc2022 AS build\nWORKDIR /src\n\n# Copy csproj and restore dependencies\nCOPY src/agent/BIDADYUAgent/BIDADYUAgent.csproj ./\nRUN dotnet restore BIDADYUAgent.csproj\n\n# Copy the rest of the source code\nCOPY src/agent/BIDADYUAgent/. ./\n\n# Publish as single file (no self-contained)\nRUN dotnet publish BIDADYUAgent.csproj -c Release -o /app/publish /p:PublishSingleFile=true /p:SelfContained=false /p:UseAppHost=true\n\nFROM mcr.microsoft.com/dotnet/runtime:8.0-windowsservercore-ltsc2022 AS final\nWORKDIR /app\nCOPY --from=build /app/publish .\n\n# Expose a dummy port if needed (agent runs without listening)\nEXPOSE 5001\n\nENTRYPOINT ["BIDADYUAgent.exe"]
+# Multi-stage Dockerfile for Agent (Windows)
+FROM mcr.microsoft.com/dotnet/sdk:8.0-windowsservercore-ltsc2022 AS build
+WORKDIR /src
+
+# Copy csproj and restore dependencies
+COPY src/agent/BIDADYUAgent/BIDADYUAgent.csproj ./
+RUN dotnet restore BIDADYUAgent.csproj
+
+# Copy the rest of the source code
+COPY src/agent/BIDADYUAgent/. ./
+
+# Publish as single file (no self-contained)
+RUN dotnet publish BIDADYUAgent.csproj -c Release -o /app/publish /p:PublishSingleFile=true /p:SelfContained=false /p:UseAppHost=true
+
+FROM mcr.microsoft.com/dotnet/runtime:8.0-windowsservercore-ltsc2022 AS final
+WORKDIR /app
+COPY --from=build /app/publish .
+
+# Expose a dummy port if needed (agent runs without listening)
+EXPOSE 5001
+
+ENTRYPOINT ["BIDADYUAgent.exe"]
