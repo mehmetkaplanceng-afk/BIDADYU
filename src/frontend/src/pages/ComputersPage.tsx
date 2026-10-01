@@ -305,9 +305,9 @@ export const ComputersPage: React.FC = () => {
   return (
     <Space direction="vertical" size="large" style={{ width: '100%' }}>
       {/* Üst İstatistik Kartları */}
-      <Row gutter={16}>
-        <Col span={6}>
-          <Card className="stat-card" bordered={false}>
+      <Row gutter={[16, 16]}>
+        <Col xs={24} sm={12} md={4} style={{ flex: '1 1 20%', maxWidth: '20%' }}>
+          <Card className="stat-card" bordered={false} style={{ borderRadius: 10, height: '100%' }}>
             <Statistic
               title="Toplam Bilgisayarlar"
               value={computers.length}
@@ -315,18 +315,18 @@ export const ComputersPage: React.FC = () => {
             />
           </Card>
         </Col>
-        <Col span={6}>
-          <Card className="stat-card" bordered={false}>
+        <Col xs={24} sm={12} md={4} style={{ flex: '1 1 20%', maxWidth: '20%' }}>
+          <Card className="stat-card" bordered={false} style={{ borderRadius: 10, height: '100%' }}>
             <Statistic
-              title="Aktif Çevrimiçi (Online)"
+              title="Aktif Çevrimiçi"
               value={onlineCount}
               valueStyle={{ color: '#3f8600' }}
               prefix={<CheckCircleTwoTone twoToneColor="#52c41a" />}
             />
           </Card>
         </Col>
-        <Col span={6}>
-          <Card className="stat-card" bordered={false}>
+        <Col xs={24} sm={12} md={4} style={{ flex: '1 1 20%', maxWidth: '20%' }}>
+          <Card className="stat-card" bordered={false} style={{ borderRadius: 10, height: '100%' }}>
             <Statistic
               title="Onay Bekleyenler"
               value={pendingCount}
@@ -335,8 +335,8 @@ export const ComputersPage: React.FC = () => {
             />
           </Card>
         </Col>
-        <Col span={6}>
-          <Card className="stat-card" bordered={false}>
+        <Col xs={24} sm={12} md={4} style={{ flex: '1 1 20%', maxWidth: '20%' }}>
+          <Card className="stat-card" bordered={false} style={{ borderRadius: 10, height: '100%' }}>
             <Statistic
               title="Gerçek LAN Agentlar"
               value={realCount}
@@ -345,8 +345,8 @@ export const ComputersPage: React.FC = () => {
             />
           </Card>
         </Col>
-        <Col span={6}>
-          <Card className="stat-card" bordered={false}>
+        <Col xs={24} sm={12} md={4} style={{ flex: '1 1 20%', maxWidth: '20%' }}>
+          <Card className="stat-card" bordered={false} style={{ borderRadius: 10, height: '100%' }}>
             <Statistic
               title="Sanal / Lab PC'leri"
               value={virtualCount}
