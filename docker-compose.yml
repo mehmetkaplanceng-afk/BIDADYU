@@ -37,17 +37,7 @@ services:
     networks:
       - bidadyu-network
 
-  agent:
-    build:
-      context: .
-      dockerfile: src/agent/BIDADYUAgent/Dockerfile
-    container_name: bidadyu-agent
-    depends_on:
-      backend:
-        condition: service_healthy
-    restart: always
-    networks:
-      - bidadyu-network
+
 
 volumes:
   bidadyu-data:
