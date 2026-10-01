@@ -14,6 +14,14 @@ services:
       - ASPNETCORE_ENVIRONMENT=Production
       - ConnectionStrings__DefaultConnection=Data Source=/app/data/bidadyu.db
     restart: always
+    networks:
+      - bidadyu-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   frontend:
     build:
@@ -23,8 +31,11 @@ services:
     ports:
       - "5173:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     restart: always
+    networks:
+      - bidadyu-network
 
   agent:
     build:
@@ -32,8 +43,15 @@ services:
       dockerfile: src/agent/BIDADYUAgent/Dockerfile
     container_name: bidadyu-agent
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     restart: always
+    networks:
+      - bidadyu-network
 
 volumes:
   bidadyu-data:
+
+networks:
+  bidadyu-network:
+    driver: bridge
