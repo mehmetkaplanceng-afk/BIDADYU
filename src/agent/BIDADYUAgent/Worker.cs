@@ -162,6 +162,12 @@ public class Worker : BackgroundService
                     }
                 }
             }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                _logger.LogWarning("Agent Token yetkisiz (401). Token sıfırlanıyor ve yeniden kaydolunuyor...");
+                _appSettings.Token = "";
+                SaveSettings();
+            }
 
             // Periyodik envanter taraması (Her 5 dakikada bir veya belirli aralıklarla)
             if (DateTime.UtcNow - _lastInventoryScan > TimeSpan.FromMinutes(5))
