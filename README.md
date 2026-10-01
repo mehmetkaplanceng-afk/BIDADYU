@@ -103,4 +103,4 @@ Sunucu IP adresi değiştiğinde sadece bu metin belgesini güncellemek yeterlid
 
 ## 📝 Lisans ve Telif Hakkı
 
-© 2026 **Adıyaman Üniversitesi Bilgi İşlem Daire Başkanlığı (BİDB)**. Tüm hakları saklıdır.
+© 2026 **X**. Tüm hakları saklıdır.
