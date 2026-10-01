@@ -341,7 +341,18 @@ export const ComputersPage: React.FC = () => {
             <Statistic
               title="Gerçek LAN Agentlar"
               value={realCount}
-              prefix={<Badge status="processing" text={`${virtualCount} Sanal`} />}
+              valueStyle={{ color: '#1677ff' }}
+              prefix={<DesktopOutlined style={{ color: '#1677ff' }} />}
+            />
+          </Card>
+        </Col>
+        <Col span={6}>
+          <Card className="stat-card" bordered={false}>
+            <Statistic
+              title="Sanal / Lab PC'leri"
+              value={virtualCount}
+              valueStyle={{ color: '#722ed1' }}
+              prefix={<LaptopOutlined style={{ color: '#722ed1' }} />}
             />
           </Card>
         </Col>

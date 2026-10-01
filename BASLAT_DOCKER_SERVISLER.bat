@@ -10,7 +10,10 @@ echo - Frontend UI (Port: 5173)
 echo - Agent Service
 echo.
 
-docker compose up --pull always
+docker compose up -d
+echo.
+echo Canli Docker Sunucu Loglari Izleniyor (Cikis icin Ctrl+C yapabilirsiniz)...
+docker compose logs -f --tail=100
 
 echo.
 echo ========================================================
