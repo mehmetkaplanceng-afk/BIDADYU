@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 echo ========================================================
 echo BIDADYU BT Yonetim Platformu - Docker Baslatici
 echo ========================================================
